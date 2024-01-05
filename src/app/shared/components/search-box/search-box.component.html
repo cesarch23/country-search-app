@@ -6,5 +6,6 @@
    [placeholder]="placeholder"
    #txtSearchValue
    (keyup)="sendSearchTerm(txtSearchValue.value)"
+   [value]="initialSearchTerm"
     >
  </mat-form-field>

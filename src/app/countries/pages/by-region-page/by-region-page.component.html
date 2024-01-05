@@ -1,14 +1,8 @@
 <div class="region">
   <h2 class="region__title">By Region</h2>
   <div class="region__chips-container">
-    <!-- <shared-search-box [placeholder]="placeholder" ()=""></shared-search-box> -->
     <mat-chip-listbox class="region__listbox" aria-label="regions">
-
-        <mat-chip-option class="chip" *ngFor="let item of regions" (click)="searchByRegion(item)" >{{item}}</mat-chip-option>
-
-      <!-- <button mat-button *ngFor="let item of regions" (click)="searchByRegion(item)">
-        <mat-chip-option >{{item}}</mat-chip-option>
-      </button> -->
+      <mat-chip-option [selected]="item == region" class="chip" *ngFor="let item of regions" (click)="searchByRegion(item)" >{{item}}</mat-chip-option>
     </mat-chip-listbox>
   </div>
 

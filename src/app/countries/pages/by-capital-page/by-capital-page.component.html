@@ -3,7 +3,7 @@
       <h2 class="capital__title">By capital</h2>
       <div class="capital__searchbox">
         <!-- <shared-search-box [placeholder]="placeholder" (onValue)="searchCapital($event)" ></shared-search-box> -->
-        <shared-search-box [placeholder]="placeholder" (onDebounce)="searchCapital($event)" ></shared-search-box>
+        <shared-search-box [initialSearchTerm]="initialSearchTerm" [placeholder]="placeholder" (onDebounce)="searchCapital($event)" ></shared-search-box>
       </div>
 
       <div class="capital__table">

@@ -2,7 +2,9 @@
       <h2 class="capital__title">By Country</h2>
       <div class="capital__searchbox">
 
-            <shared-search-box [placeholder]="placeholder" (onDebounce)="searchCountry($event)"></shared-search-box>
+            <shared-search-box
+            [initialSearchTerm]="initialSearchValue"
+            [placeholder]="placeholder" (onDebounce)="searchCountry($event)"></shared-search-box>
 
       </div>
 

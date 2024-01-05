@@ -1,23 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Country } from '../../interfaces/country.interface';
 import { CountriesService } from '../../services/countries.service';
-type Region =  "Africa" | "Americas" | "Asia" | "Europe" | "Oceania";
+import { Region } from '../../interfaces/regions.type';
+
 
 @Component({
   selector: 'app-by-region-page',
   templateUrl: './by-region-page.component.html',
   styleUrls: ['./by-region-page.component.css']
 })
-export class ByRegionPageComponent {
+export class ByRegionPageComponent implements OnInit {
 
   placeholder:string = "Write hire the region";
   countries:Country[]=[];
+  region:Region="";
   isLoading=false;
-  regions:Region[] = ["Africa" , "Americas" , "Asia" , "Europe" , "Oceania"]
+  regions:Region[] = ["Africa" , "Americas" , "Asia" , "Europe" , "Oceania"];
+
 
   constructor(private countriesService:CountriesService){}
+  ngOnInit(): void {
+    this.countries= this.countriesService.storage.byRegion.countries;
+    this.region=this.countriesService.storage.byRegion.region;
+  }
 
-  searchByRegion(region:string)
+  searchByRegion(region:Region)
   {
     console.log(region)
     this.isLoading=true;
