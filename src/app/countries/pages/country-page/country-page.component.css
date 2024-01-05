@@ -1,0 +1,57 @@
+.spinner{
+  width: 90vw;
+  /* ojo ahi */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.country-name{
+  margin: 15px 0;
+  font-size: 22px;
+}
+.country{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  /* background-color: aqua; */
+
+}
+.country__img{
+  width: 150px;
+}
+
+.country__info-title{
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+
+}
+.country__list{
+  padding: 0;
+  list-style: none;
+}
+
+.translations{
+  margin-top: 15px;
+}
+.translations__title{
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+.translations__list{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.translations__list-item{
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: #2A0070;
+  border-radius: 10px;
+  color: white;
+}
+

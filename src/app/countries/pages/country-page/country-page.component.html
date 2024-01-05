@@ -1,0 +1,37 @@
+<ng-template #loading>
+  <div class="spinner">
+    <shared-spinner></shared-spinner>
+  </div>
+</ng-template>
+
+<div *ngIf="country ; else loading">
+<h2 class="country-name"> Country:  <strong> {{country.name.common}}</strong></h2>
+
+<div class="country">
+  <div class="country__flag">
+    <img class="country__img" [src]="country.flags.svg" [alt]="country.name.common">
+  </div>
+
+  <div class="country__info">
+    <h3 class="country__info-title">Information</h3>
+    <ul class="country__list">
+      <li class="country__list-item"><strong>Capital :</strong> {{country.capital }}</li>
+      <li class="country__list-item"><strong>Region :</strong> {{country.region }}</li>
+      <li class="country__list-item"><strong>Population :</strong> {{country.population | number}}</li>
+      <li class="country__list-item"><strong>Code :</strong> {{country.cca3 }}</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="translations">
+  <h3 class="translations__title">Translations</h3>
+  <ul class="translations__list">
+    <li class="translations__list-item">{{country.translations['bre'].common}}</li>
+    <li class="translations__list-item">{{country.translations['ita'].common}}</li>
+    <li class="translations__list-item">{{country.translations['ces'].common}}</li>
+    <li class="translations__list-item">{{country.translations['deu'].common}}</li>
+    <li class="translations__list-item">{{country.translations['fin'].common}}</li>
+    <li class="translations__list-item">{{country.translations['ara'].common}}</li>
+  </ul>
+</div>

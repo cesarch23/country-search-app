@@ -1,0 +1,10 @@
+   <!-- (keyup)="sendSearchValue(txtSearchValue.value)" -->
+ <mat-form-field>
+   <input matInput
+   type="text"
+   name="search"
+   [placeholder]="placeholder"
+   #txtSearchValue
+   (keyup)="sendSearchTerm(txtSearchValue.value)"
+    >
+ </mat-form-field>

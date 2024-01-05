@@ -1,0 +1,33 @@
+<h2>Countries</h2>
+<ul class="menu">
+  <button
+     routerLink="home"
+    routerLinkActive="active "
+    [routerLinkActiveOptions]="{exact:true}"
+    mat-raised-button
+    >Home</button>
+  <hr>
+  <!-- <h2>Filters</h2> -->
+
+  <button routerLink="countries/by-capital"
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{exact:true}"
+  mat-raised-button
+  >By capital </button>
+
+  <button routerLink="../countries/by-country"
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{exact:true}"
+  mat-raised-button
+  >By country </button>
+
+  <button routerLink="../countries/by-region"
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{exact:true}"
+  mat-raised-button
+  >By region </button>
+
+
+
+
+</ul>

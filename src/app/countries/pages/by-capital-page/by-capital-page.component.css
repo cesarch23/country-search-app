@@ -1,0 +1,10 @@
+.capital{
+  display: flex;
+  flex-direction: column;
+}
+.capital__title{
+  margin: 10px 0px;
+}
+.capital__table{
+ 
+}
