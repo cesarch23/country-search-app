@@ -1,12 +1,14 @@
 .table {
-
-  width: 100%;
-  box-shadow: 0px -0px 33px 0px rgba(0,0,0,0.1);
-  min-width: 700px;
-  overflow-x: auto;
-  margin-right: 20px;
-
+  box-shadow: 0px 0px 12px 5px rgba(0,0,0,0.1);
 }
 img{
   width: 30px;
 }
+.warnig{
+  background-color: rgb(255, 227, 144);
+  width: 212px;
+  padding: 10px;
+  color: black;
+  font-weight: bold;
+}
+

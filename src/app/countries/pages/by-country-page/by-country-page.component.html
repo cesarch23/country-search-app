@@ -1,18 +1,10 @@
-<div class="capital">
-      <h2 class="capital__title">By Country</h2>
-      <div class="capital__searchbox">
+<h2>By Country</h2>
+<shared-search-box [initialSearchTerm]="initialSearchValue" [placeholder]="placeholder"
+  (onDebounce)="searchCountry($event)"></shared-search-box>
+<div class="capital__table">
+  <shared-spinner *ngIf="isLoading ; else elseblock"></shared-spinner>
+  <ng-template #elseblock>
+    <country-table [countries]="countries"></country-table>
+  </ng-template>
 
-            <shared-search-box
-            [initialSearchTerm]="initialSearchValue"
-            [placeholder]="placeholder" (onDebounce)="searchCountry($event)"></shared-search-box>
-
-      </div>
-
-      <div class="capital__table">
-            <shared-spinner *ngIf="isLoading ; else elseblock"></shared-spinner>
-            <ng-template #elseblock>
-                  <country-table [countries]="countries"></country-table>
-            </ng-template>
-
-      </div>
 </div>

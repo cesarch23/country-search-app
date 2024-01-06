@@ -2,16 +2,15 @@
   <h2 class="region__title">By Region</h2>
   <div class="region__chips-container">
     <mat-chip-listbox class="region__listbox" aria-label="regions">
-      <mat-chip-option [selected]="item == region" class="chip" *ngFor="let item of regions" (click)="searchByRegion(item)" >{{item}}</mat-chip-option>
+      <mat-chip-option [selected]="item == region" class="chip" *ngFor="let item of regions"
+        (click)="searchByRegion(item)">{{item}}</mat-chip-option>
     </mat-chip-listbox>
   </div>
 
   <div class="capital__table">
-
     <shared-spinner *ngIf="isLoading ; else elseblock"></shared-spinner>
     <ng-template #elseblock>
       <country-table [countries]="countries"></country-table>
     </ng-template>
-
   </div>
 </div>

@@ -1,23 +1,20 @@
 <mat-drawer-container class="drawer" autosize>
-  <mat-drawer #drawer mode="side" class="drawer__sidenav">
+  <mat-drawer class="drawer__sidenav" #drawer mode="side"  opened>
     <shared-sidebar></shared-sidebar>
   </mat-drawer>
-  <mat-drawer-content class="drawer__content">
-
-    <div>
-      <button *ngIf="show ; else before"  mat-icon-button (click)="open()"  color="primary" class="drawer__menu-open"><mat-icon
-          fontIcon="navigate_next"></mat-icon>
+  <div class="drawer__contents">
+    <div class="drawer__buttons">
+      <button *ngIf="show ; else before" mat-icon-button (click)="open()" color="primary"
+        ><mat-icon fontIcon="navigate_next"></mat-icon>
       </button>
       <ng-template #before>
-        <button mat-icon-button (click)="close()" color="primary" class="drawer__menu-open"><mat-icon
-          fontIcon="navigate_before"></mat-icon>
-      </button>
+        <button  mat-icon-button (click)="close()" color="primary" ><mat-icon
+            fontIcon="navigate_before"></mat-icon>
+        </button>
       </ng-template>
     </div>
-
-    <div>
+    <div class="drawer__main-content">
       <router-outlet></router-outlet>
     </div>
-
-  </mat-drawer-content>
+  </div>
 </mat-drawer-container>

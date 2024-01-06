@@ -1,32 +1,27 @@
 .drawer{
-  height: 100vh;
   width: 100%;
 }
-
 .drawer__sidenav {
-
   background-color: #2A0070;
   color: white;
   padding: 20px;
 }
-
-.drawer__content {
-  height: 100vh;
+.drawer__contents{
   position: relative;
-  display: flex;
-  padding-right: 10px;
-  min-width: 700px;
-  overflow-y: scroll;
+  overflow: auto;
+  height: 100vh;
+  width: 100%;
+
 }
-.drawer__menu-open{
-  margin: 0px 10px;
+.drawer__main-content {
+  z-index: 20;
+  padding: 20px 60px;
+}
+.drawer__buttons{
   position: sticky;
-  top: 50%;
-  left: 0px;
-
-  background-color: rgb(0, 0, 0 , .1);
-
-  color: #2A0070;
-  z-index: 10;
-
+  top:50%;
+  left: 5px;
+  z-index: 100;
 }
+
+

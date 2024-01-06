@@ -36,11 +36,5 @@ export class CountryPageComponent implements OnInit {
       if(!count) return this.route.navigateByUrl('');
       return this.country=count;
     })
-    ;
-
-
-
-
-
   }
 }

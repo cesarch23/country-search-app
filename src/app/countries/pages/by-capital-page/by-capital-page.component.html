@@ -1,14 +1,10 @@
+<h2 class="capital__title">By capital</h2>
+<!-- <shared-search-box [placeholder]="placeholder" (onValue)="searchCapital($event)" ></shared-search-box> -->
+<shared-search-box [initialSearchTerm]="initialSearchTerm" [placeholder]="placeholder"
+  (onDebounce)="searchCapital($event)"></shared-search-box>
 
-<div class="capital">
-      <h2 class="capital__title">By capital</h2>
-      <div class="capital__searchbox">
-        <!-- <shared-search-box [placeholder]="placeholder" (onValue)="searchCapital($event)" ></shared-search-box> -->
-        <shared-search-box [initialSearchTerm]="initialSearchTerm" [placeholder]="placeholder" (onDebounce)="searchCapital($event)" ></shared-search-box>
-      </div>
-
-      <div class="capital__table">
-        <shared-spinner *ngIf="isLoading ; else elseblock"></shared-spinner>
-        <ng-template #elseblock><country-table [countries]="countries"></country-table></ng-template>
-
-      </div>
+<div class="capital__table">
+  <shared-spinner *ngIf="isLoading ; else elseblock"></shared-spinner>
+  <ng-template #elseblock><country-table [countries]="countries"></country-table></ng-template>
 </div>
+

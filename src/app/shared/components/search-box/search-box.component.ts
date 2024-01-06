@@ -41,7 +41,5 @@ export class SearchBoxComponent implements OnInit, OnDestroy{
     //third emit value to father and start the search
   }
 
-  // sentValue(value:string){
-  //   this.onDebounce.emit(value)
-  // }
+   
 }

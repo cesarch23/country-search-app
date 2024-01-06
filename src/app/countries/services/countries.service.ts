@@ -30,7 +30,6 @@ export class CountriesService {
 
   getCountryDetails(code:string):Observable<Country | null>{
     const url = `${baseUrl}/alpha/${code}`;
-//    https://restcountries.com/v3.1/alpha/{code}
     return this.http.get<Country[]>(url).pipe(
       map(countries=>countries.length > 0? countries[0]: null ),
       catchError(()=>of(null))
@@ -52,7 +51,6 @@ export class CountriesService {
   }
   getCountries(country:string):Observable<Country[]>{
     const url = `${baseUrl}/name/${country}?fullText=true`;
-    //https://restcountries.com/v3.1/name/peru?fullText=true
     return this.http.get<Country[]>(url).pipe(
       catchError(()=>of([]))
     ).pipe(
@@ -65,8 +63,6 @@ export class CountriesService {
   }
   getRegion(region:Region):Observable<Country[]>{
     const url = `${baseUrl}/region/${region}`;
-    //https://restcountries.com/v3.1/region/europe
-
     return this.http.get<Country[]>(url).pipe(
       catchError(()=>of([]))
     ).pipe(
